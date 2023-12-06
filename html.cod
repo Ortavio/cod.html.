@@ -1,0 +1,25 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movendo Elementos</title>
+    <style>
+        #meuElemento {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+    <script>
+        function moverElemento(event) {
+            var elemento = document.getElementById("meuElemento");
+            elemento.style.left = event.clientX + "px";
+            elemento.style.top = event.clientY + "px";
+        }
+    </script>
+</head>
+<body onmousemove="moverElemento(event)">
+    <div id="meuElemento"></div>
+</body>
+</html>
